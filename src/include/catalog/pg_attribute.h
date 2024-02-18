@@ -221,6 +221,9 @@ MAKE_SYSCACHE(ATTNUM, pg_attribute_relid_attnum_index, 128);
 
 #define		  ATTRIBUTE_GENERATED_STORED	's'
 
+#define		  ATTRIBUTE_ROW_START_TIME	'S'
+#define		  ATTRIBUTE_ROW_END_TIME	'E'
+
 #endif							/* EXPOSE_TO_CLIENT_CODE */
 
 #endif							/* PG_ATTRIBUTE_H */

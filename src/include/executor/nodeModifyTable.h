@@ -26,6 +26,8 @@ extern void ExecComputeStoredGenerated(ResultRelInfo *resultRelInfo,
 extern ModifyTableState *ExecInitModifyTable(ModifyTable *node, EState *estate, int eflags);
 extern void ExecEndModifyTable(ModifyTableState *node);
 extern void ExecReScanModifyTable(ModifyTableState *node);
+extern void ExecSetRowStartTime(EState *estate, TupleTableSlot *slot, ResultRelInfo *resultRelInfo);
+extern bool ExecSetRowEndTime(EState *estate, TupleTableSlot *slot, ResultRelInfo *resultRelInfo);
 
 extern void ExecInitMergeTupleSlots(ModifyTableState *mtstate,
 									ResultRelInfo *resultRelInfo);

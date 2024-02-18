@@ -58,7 +58,13 @@
 #include "optimizer/tlist.h"
 #include "parser/analyze.h"
 #include "parser/parse_agg.h"
+<<<<<<< ours
 #include "parser/parse_relation.h"
+||||||| base
+=======
+#include "parser/parse_clause.h"
+#include "parser/parse_relation.h"
+>>>>>>> theirs
 #include "parser/parsetree.h"
 #include "partitioning/partdesc.h"
 #include "rewrite/rewriteManip.h"

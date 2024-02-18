@@ -137,9 +137,16 @@ base_yylex(YYSTYPE *lvalp, YYLTYPE *llocp, core_yyscan_t yyscanner)
 	 */
 	switch (cur_token)
 	{
+<<<<<<< ours
 		case FORMAT:
 			cur_token_length = 6;
 			break;
+||||||| base
+=======
+		case FOR:
+			cur_token_length = 3;
+			break;
+>>>>>>> theirs
 		case NOT:
 			cur_token_length = 3;
 			break;
@@ -194,6 +201,7 @@ base_yylex(YYSTYPE *lvalp, YYLTYPE *llocp, core_yyscan_t yyscanner)
 	/* Replace cur_token if needed, based on lookahead */
 	switch (cur_token)
 	{
+<<<<<<< ours
 		case FORMAT:
 			/* Replace FORMAT by FORMAT_LA if it's followed by JSON */
 			switch (next_token)
@@ -204,6 +212,13 @@ base_yylex(YYSTYPE *lvalp, YYLTYPE *llocp, core_yyscan_t yyscanner)
 			}
 			break;
 
+||||||| base
+=======
+		case FOR:
+			if (next_token == SYSTEM_TIME)
+				cur_token = FOR_LA;
+			break;
+>>>>>>> theirs
 		case NOT:
 			/* Replace NOT by NOT_LA if it's followed by BETWEEN, IN, etc */
 			switch (next_token)
